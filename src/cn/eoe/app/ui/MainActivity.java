@@ -218,6 +218,7 @@ public class MainActivity extends BaseSlidingFragmentActivity implements
         mBasePageAdapter = new BasePageAdapter(MainActivity.this);
         mViewPager.setOffscreenPageLimit(0);
         mViewPager.setAdapter(mBasePageAdapter);
+        // 绑定Indicator到ViewPager上
         mIndicator.setViewPager(mViewPager);
         mIndicator.setOnPageChangeListener(new MyPageChangeListener());
         new MyTask().execute(topDao);
